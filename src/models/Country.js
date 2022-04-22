@@ -17,12 +17,12 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    continente:{
+    continent:{
       type:DataTypes.STRING,
       allowNull: false,
     },
     capital:{
-      type: DataTypes.ARRAY(DataTypes.STRING),
+      type: DataTypes.STRING,
       allowNull: false,
     },
     subregion:{
@@ -31,8 +31,11 @@ module.exports = (sequelize) => {
     area:{
       type: DataTypes.INTEGER,
     },
-    poblacion:{
+    population:{
       type: DataTypes.STRING,
+    },
+    lenguage:{
+      type: DataTypes.ARRAY(DataTypes.STRING),
     },
     createInDb: {
       type: DataTypes.BOOLEAN,

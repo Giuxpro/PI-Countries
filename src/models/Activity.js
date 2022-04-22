@@ -14,7 +14,7 @@ module.exports = (sequelize) => {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    dificultad:{
+    difficulty:{
       validate: (value)=>{
         if(value < 1 || value > 5){
           throw new Error("Difficulty cannot be zero or greater than 5");
@@ -22,12 +22,12 @@ module.exports = (sequelize) => {
       },
       type: DataTypes.INTEGER,
     },
-    duracion: {
+    duration: {
       type: DataTypes.INTEGER,
     },
-    temporada:{
-        type: DataTypes.STRING,
-    }
+    season:{
+      type: DataTypes.ENUM("Verano", "Otoño", "Invierno", "Primavera"),
+    },
     
   });
 };
